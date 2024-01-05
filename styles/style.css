@@ -1,0 +1,116 @@
+/* ESTILIZAÇÃO DA NAV BAR*/
+
+/* RESET NO CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* DECLARAÇÃO FLEX DO CONTAINER*/
+#container{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+#logo{
+    margin-inline: 100px;
+}
+
+/* ESTILIZAÇÃO DOS BUTTONS */
+.subcontainer-btns{
+    flex: 1 1 0px;
+}
+.subcontainer-btns button, .subcontainer-entcad button{
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 105px;
+    height: 50px;
+    color: #61646a;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.subcontainer-btns button:hover{
+    color: #fff;
+    background-color: #831d1c;
+}
+.subcontainer-entcad{
+    margin-inline-end:80px;
+}
+#btnEnt{
+    width: 105px;
+    border-radius: 10px;
+}
+#btnEnt:hover{
+    color: #fff;
+    background-color: #1c4583;
+}
+#btnCad{
+    width: 105px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #831d1c;
+}
+#btnCad:hover{
+    background-color: #4b1211;
+}
+
+/* DECLARAÇÃO DE MEDIAS QUERIES */
+@media (width <= 1080px){
+    #logo{
+        margin-inline: 15px;
+    }
+    #container{
+        height: 100px;
+    }
+    .subcontainer-btns{
+        margin: 15px;
+        width: 100px;
+    }
+    .subcontainer-entcad{
+        margin-inline-end: 15px;
+    }
+}
+@media (width <= 895px){
+    #container{
+        margin-top: 138.24px;
+        opacity: 40%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0px;
+        height: 60%;
+        border-left: #4b1211 6px solid;
+        border-top: #4b1211 6px solid;
+        border-bottom: #4b1211 6px solid;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        background-color: #f8f8f8;
+        transition: 0.5s;
+    }
+    #btnCad{
+        color: #61646a;
+        background-color: transparent;
+    }
+    #container:hover{
+        opacity: 100%;
+    }
+    #btnCad:hover{
+        color: #fff;
+        background-color: #4b1211;
+    }
+    .subcontainer-btns{
+        display: flex;
+        width: 115px;
+        flex-direction: column;
+        margin-inline: 5px;
+    }
+    .subcontainer-entcad{
+        display: flex;
+        flex-direction: column;
+        margin-inline: 5px;
+    }
+}

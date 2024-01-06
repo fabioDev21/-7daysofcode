@@ -1,3 +1,9 @@
+/* CRIAÇÃO DE VARIÁVEIS */
+:root{
+    --text-color: var(#667085);
+    --main-color: var(#8E2424);
+}
+
 /* ESTILIZAÇÃO DA NAV BAR*/
 
 /* RESET NO CSS */
@@ -10,13 +16,18 @@
 #container{
     display: flex;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 35px;
 }
 #logo{
     margin-inline: 100px;
 }
+#navMob{
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
 
+}
 /* ESTILIZAÇÃO DOS BUTTONS */
 .subcontainer-btns{
     flex: 1 1 0px;
@@ -27,7 +38,7 @@
     font-weight: 600;
     width: 105px;
     height: 50px;
-    color: #61646a;
+    color: #667085;
     background-color: transparent;
     border: transparent;
     border-radius: 10px;
@@ -35,7 +46,7 @@
 }
 .subcontainer-btns button:hover{
     color: #fff;
-    background-color: #831d1c;
+    background-color: #8E2424;
 }
 .subcontainer-entcad{
     margin-inline-end:80px;
@@ -52,16 +63,19 @@
     width: 105px;
     color: #fff;
     border-radius: 10px;
-    background-color: #831d1c;
+    background-color: #8E2424;
 }
 #btnCad:hover{
     background-color: #4b1211;
 }
 
 /* DECLARAÇÃO DE MEDIAS QUERIES */
-@media (width <= 1080px){
+@media (width <= 1145px){
     #logo{
         margin-inline: 15px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 15px;
     }
     #container{
         height: 100px;
@@ -74,25 +88,69 @@
         margin-inline-end: 15px;
     }
 }
-@media (width <= 895px){
-    #container{
-        margin-top: 138.24px;
-        opacity: 40%;
+/* FIM DAS DECLARAÇÕES PARA O NAV*/
+
+/* INÍCIO DECLARAÇÕES HEADER*/
+.cabecalho{
+    font-size: 18px;
+    margin: auto;
+    width: 600px;
+    margin-top: 30px;
+    text-align: center;
+}
+#title{
+    margin-bottom: 15px;
+    color: #8E2424;
+}
+.desc-txt{
+    color: #667085;
+    border-color: #1c4583 solid 2px;
+    margin: 20px auto;
+    width: 600px;
+}
+
+@media (width <= 930px){
+    #logoMenu{
+        width: 200px;
+        height: 45px;
+    }
+    #navMob{
+        height: 110px;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #8E2424;
+        padding: 15px;
+        visibility: visible;
+        width: 930px;
+        max-width: 930px;
+    }
+    .cabecalho{
+        font-size: 36px;
+        margin-left: 0px;
+        padding: 10px;
+        text-align: center;
+        width: 930px;
+    }
+    .desc-txt{
+        width: 600px;
+    }
+    #container{
+        visibility: hidden;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
         flex-direction: column;
         position: fixed;
-        right: 0px;
-        height: 60%;
-        border-left: #4b1211 6px solid;
-        border-top: #4b1211 6px solid;
-        border-bottom: #4b1211 6px solid;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        top: 0px;
+        left: 0px;
+        height: 0px;
+        border-right: #4b1211 6px solid;
         background-color: #f8f8f8;
         transition: 0.5s;
     }
     #btnCad{
-        color: #61646a;
+        color: #667085;
         background-color: transparent;
     }
     #container:hover{
@@ -112,5 +170,14 @@
         display: flex;
         flex-direction: column;
         margin-inline: 5px;
+    }
+}
+@media (660px >= width) {
+    #navMob{
+        height: 120px;
+    }
+    #logo{
+        width: 180px;;
+        height: 45px;
     }
 }

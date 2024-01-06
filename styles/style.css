@@ -1,5 +1,5 @@
 /* CRIAÇÃO DE VARIÁVEIS */
-:root{
+:root {
     --text-color: var(#667085);
     --main-color: var(#8E2424);
 }
@@ -108,7 +108,40 @@
     margin: 20px auto;
     width: 600px;
 }
+/* FIM DAS DECLARAÇÕES DO HEADER*/
+/* DECLARAÇÕES SECTION */
+#section-container{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat( auto-fit, 300px);
+    justify-content: center;
+    margin-top: 100px;
+}
+.section-item{
+    font-size: 20px;
+}
+/* FIM DECLARAÇÕES SECTION */
+/* MEDIA QUERIES */
 
+@media (width <= 1345px){
+    #section-container{
+        margin-top: 100px;
+        grid-template-columns: repeat( auto-fit, minmax(600px,));
+
+    }
+    #item-1 {
+        grid-area: item-1;
+    }
+    #item-2 {
+        grid-area: item-2;
+    }
+    #item-3 {
+        grid-area: item-3;
+    }
+    #item-4 {
+        grid-area: item-4;
+    }
+}
 @media (width <= 930px){
     #logoMenu{
         width: 200px;

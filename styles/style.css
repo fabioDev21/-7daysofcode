@@ -1,7 +1,7 @@
 /* CRIAÇÃO DE VARIÁVEIS */
 :root {
-    --text-color: var(#667085);
-    --main-color: var(#8E2424);
+    --text-color: #667085;
+    --main-color: #8E2424;
 }
 
 /* ESTILIZAÇÃO DA NAV BAR*/
@@ -95,7 +95,7 @@
     font-size: 18px;
     margin: auto;
     width: 600px;
-    margin-top: 30px;
+    margin-top: 5em;
     text-align: center;
 }
 #title{
@@ -115,102 +115,172 @@
     gap: 25px;
     grid-template-columns: repeat( auto-fit, 300px);
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 5em;
 }
 .section-item{
     font-size: 20px;
 }
 /* FIM DECLARAÇÕES SECTION */
+/*DECLARAÇÕES ÁREA DAS VAGAS */
+#title-vagas{
+    margin: auto;
+    width: max-content;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: #f4f5f8;
+    color: var(--main-color);
+}
+
+section figure{
+    display: flex;
+    justify-content: center;
+}
+section img{
+    display: flex;
+    width: 110vh;
+    margin-inline: 15px;
+}
+/*FIM DECLARAÇÕES ÁREA DAS VAGAS */
+@media (width <= 1250px){
+    section img{
+        width: 90vh;
+    }
+}
 /* MEDIA QUERIES */
 
 @media (width <= 1345px){
     #section-container{
-        margin-top: 100px;
-        grid-template-columns: repeat( auto-fit, minmax(600px,));
-
+        align-items: center;
+        margin-top: 5em;
+        grid-template-columns: 20em 20em;
     }
-    #item-1 {
-        grid-area: item-1;
-    }
-    #item-2 {
-        grid-area: item-2;
-    }
-    #item-3 {
-        grid-area: item-3;
-    }
-    #item-4 {
-        grid-area: item-4;
+    .section-item{
+        font-size: 18px;
     }
 }
-@media (width <= 930px){
+@media (width <= 945px){
+    #container{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
     #logoMenu{
-        width: 200px;
-        height: 45px;
+        width: 60px;
+        visibility: visible;
     }
     #navMob{
-        height: 110px;
+        width: 100%;
+        height: 7em;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #8E2424;
-        padding: 15px;
+        background-color: var(--main-color);
         visibility: visible;
-        width: 930px;
-        max-width: 930px;
     }
     .cabecalho{
-        font-size: 36px;
-        margin-left: 0px;
-        padding: 10px;
+        margin-top: 0px;
+        font-size: 32px;
         text-align: center;
-        width: 930px;
+        width: 80vh;
     }
     .desc-txt{
-        width: 600px;
+        width: auto;
     }
-    #container{
-        visibility: hidden;
-        margin-top: 0px;
-        display: flex;
+    #section-container{
         align-items: center;
-        flex-direction: column;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        height: 0px;
-        border-right: #4b1211 6px solid;
-        background-color: #f8f8f8;
-        transition: 0.5s;
+        margin-top: 5em;
+        grid-template-columns: 20em;
+        gap: 3em;
     }
-    #btnCad{
-        color: #667085;
-        background-color: transparent;
+    .section-item{
+        text-align: center;
+        font-size: 32px;
     }
-    #container:hover{
-        opacity: 100%;
-    }
-    #btnCad:hover{
-        color: #fff;
-        background-color: #4b1211;
-    }
-    .subcontainer-btns{
-        display: flex;
-        width: 115px;
-        flex-direction: column;
-        margin-inline: 5px;
-    }
-    .subcontainer-entcad{
-        display: flex;
-        flex-direction: column;
-        margin-inline: 5px;
-    }
+    
 }
-@media (660px >= width) {
+@media (760px >= width) {
+    body{
+        width: 100vh;
+        height: 100vh;
+    }
     #navMob{
-        height: 120px;
+        width: 100vh;
+        margin: 0 auto;
     }
-    #logo{
-        width: 180px;;
-        height: 45px;
+
+    .cabecalho{
+        margin-top: 0px;
+        font-size: 42px;
+        text-align: center;
+        width: 80vh;
+    }
+    .desc-txt{
+        width: auto;
+    }
+    #section-container{
+        align-items: center;
+        margin-top: 5em;
+        grid-template-columns: 60vh;
+        gap: 5em;
+    }
+    .section-item{
+        text-align: center;
+        font-size: 42px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #container{
+    visibility: hidden;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 0px;
+    border-right: #4b1211 6px solid;
+    background-color: #f8f8f8;
+    transition: 0.5s;
+}
+#btnCad{
+    color: #667085;
+    background-color: transparent;
+}
+#container:hover{
+    opacity: 100%;
+}
+#btnCad:hover{
+    color: #fff;
+    background-color: #4b1211;
+}
+.subcontainer-btns{
+    display: flex;
+    width: 115px;
+    flex-direction: column;
+    margin-inline: 5px;
+}
+.subcontainer-entcad{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 5px;
+} */

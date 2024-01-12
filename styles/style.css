@@ -95,7 +95,7 @@
     font-size: 18px;
     margin: auto;
     width: 600px;
-    margin-top: 5em;
+    margin-top: 1em;
     text-align: center;
 }
 #title{
@@ -130,24 +130,76 @@
     background-color: #f4f5f8;
     color: var(--main-color);
 }
+#section-talentos{
+    font-size: 18px;
+    margin: auto;
+    width: 600px;
+    margin-top: 5em;
+    text-align: center;
+}
 
-section figure{
+#section-talentos figure{
     display: flex;
     justify-content: center;
 }
-section img{
+#section-talentos img{
     display: flex;
     width: 110vh;
     margin-inline: 15px;
 }
-/*FIM DECLARAÇÕES ÁREA DAS VAGAS */
-@media (width <= 1250px){
-    section img{
-        width: 90vh;
-    }
+/*FIM DECLARAÇÕES ÁREA DOS TALENTOS */
+/*INÍCIO DECLARAÇÕES ÁREA DE VAGAS*/
+#containerVagas{
+    display: grid;
+    grid-template-columns: auto-fit, 100vw;
+    height: 60vh;
+    justify-content: center;
+    padding: 2.5em;
 }
-/* MEDIA QUERIES */
+.containerVagas__title{
+    margin-top: 4vh;
+    margin-bottom: 1.5vh;
+    font-size: 26px;
+    font-weight: bold;
+}
+.infosVaga{
+    font-size: 22px;
+    width: 580px;
+    height: 130px;
+    margin: 1vh;
+    padding: 1em;
+    border: #d4e4fc solid 2px;
+    border-radius: 15px;
+}
+.infosVaga__title{
+    font-size: 24px;
+    margin-bottom: 1.8em;
+}
+.infosVaga__p{
+    font-weight: 500;
+    display: inline;
+    padding-right: 1em;
+}
+/*FIM DECLARAÇÕES ÁREA DE VAGAS */
 
+/*INÍCIO DECLARAÇÕES ÁREA DE VAGAS*/
+#containerAvaliacao{
+    padding-top: 10em;
+    width: 65%;
+    height: 100px;
+    text-align: center;
+}
+.containerAvaliacao__title{
+    font-size: 20px;
+    color: var(--main-color);
+}
+.containerAvaliacao__p{
+    font-size: 28px;
+    margin: 1em;
+}
+/*FIM DECLARAÇÕES ÁREA DE VAGAS */
+
+/* MEDIA QUERIES */
 @media (width <= 1345px){
     #section-container{
         align-items: center;
@@ -156,6 +208,24 @@ section img{
     }
     .section-item{
         font-size: 18px;
+    }
+}
+@media (width <= 1250px){
+    #section-talentos img{
+        width: 90vh;
+    }
+    .containerVagas__title{
+        font-size: 26px;
+    }
+    .infosVaga{
+        width: 45vw;
+    }
+    .infosVaga__title{
+        font-size: 24px;
+    }
+    .infosVaga__p{
+
+        font-size: 22px;
     }
 }
 @media (width <= 945px){
@@ -187,18 +257,19 @@ section img{
         width: auto;
     }
     #section-container{
-        align-items: center;
         margin-top: 5em;
         grid-template-columns: 20em;
         gap: 3em;
     }
     .section-item{
-        text-align: center;
         font-size: 32px;
     }
-    
+    .infosVaga{
+        width: 390px;
+        height: 130px;
+    }
 }
-@media (760px >= width) {
+@media (840px >= width) {
     body{
         width: 100vh;
         height: 100vh;
@@ -207,7 +278,6 @@ section img{
         width: 100vh;
         margin: 0 auto;
     }
-
     .cabecalho{
         margin-top: 0px;
         font-size: 42px;
@@ -226,6 +296,19 @@ section img{
     .section-item{
         text-align: center;
         font-size: 42px;
+    }
+    .containerVagas__title{
+        font-size: 34px;
+    }
+    .infosVaga{
+        width: 550px;
+        height: 180px;
+    }
+    .infosVaga__title{
+        font-size: 32px;
+    }
+    .infosVaga__p{
+        font-size: 30px;
     }
 }
 

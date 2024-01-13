@@ -150,11 +150,11 @@
 /*FIM DECLARAÇÕES ÁREA DOS TALENTOS */
 /*INÍCIO DECLARAÇÕES ÁREA DE VAGAS*/
 #containerVagas{
+    margin: 0 auto;
+    width: 0px;
     display: grid;
     grid-template-columns: auto-fit, 100vw;
-    height: 60vh;
     justify-content: center;
-    padding: 2.5em;
 }
 .containerVagas__title{
     margin-top: 4vh;
@@ -184,9 +184,12 @@
 
 /*INÍCIO DECLARAÇÕES ÁREA DE VAGAS*/
 #containerAvaliacao{
+    display: flex;
+    flex-direction: column;
     padding-top: 10em;
-    width: 65%;
-    height: 100px;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10em;
     text-align: center;
 }
 .containerAvaliacao__title{
@@ -197,7 +200,60 @@
     font-size: 28px;
     margin: 1em;
 }
+.containerAvaliacao__img{
+    padding-bottom: 1.5em;
+    width: 80px;
+}
+.containerAvaliacao__figcaption{
+    font-size: 16px;
+    color: var(--text-color);
+}
 /*FIM DECLARAÇÕES ÁREA DE VAGAS */
+/*INÍCIO DECLARAÇÕES DO FORM DE OPORTUNIDADES*/
+
+#containerFooter{
+    background-color: #e8effa;
+    padding: 5em;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.footer__title{
+    font-size: 36px;
+    margin-bottom: 0.5em;
+}
+.footer__desc{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 2em;
+}
+#form__userEmail{
+    height: 3.8em;
+    width: 24em;
+    border: 2px #c6dcfd solid;
+    border-radius: 10px;
+    padding: 1em;
+    margin-inline: 0.5em;
+}
+#form__btnCad{
+    font-weight: 600;
+    height: 3.8em;
+    width: 8em;
+    background-color: var(--main-color);
+    color: #fff;
+    border: transparent;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+#form__btnCad:hover{
+    background-color: #4b1211;
+}
+#descCopy{
+    margin-top: 1.5em;
+    color: var(--text-color);
+}
+
+/*FIM DECLARAÇÕES DO FORM DE OPORTUNIDADES*/
 
 /* MEDIA QUERIES */
 @media (width <= 1345px){
@@ -227,6 +283,7 @@
 
         font-size: 22px;
     }
+    
 }
 @media (width <= 945px){
     #container{
@@ -268,6 +325,22 @@
         width: 390px;
         height: 130px;
     }
+    #containerAvaliacao{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10em;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+    .containerAvaliacao__title{
+        font-size: 26px;
+        color: var(--main-color);
+    }
+    .containerAvaliacao__p{
+        font-size: 32px;
+        margin: 1em;
+    }
 }
 @media (840px >= width) {
     body{
@@ -305,13 +378,53 @@
         height: 180px;
     }
     .infosVaga__title{
-        font-size: 32px;
+        font-size: 34px;
     }
     .infosVaga__p{
+        font-size: 32px;
+    }
+    #containerAvaliacao{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10em;
+        width: 550px;
+        margin-bottom: 1.5em;
+        text-align: center;
+    }
+    .containerAvaliacao__title{
         font-size: 30px;
+        color: var(--main-color);
+    }
+    .containerAvaliacao__p{
+        font-size: 34px;
+        margin: 1em;
+    }
+    .containerAvaliacao__img{
+        width: 90px;
+    }
+    .containerAvaliacao__figcaption{
+        font-size: 20px;
+        color: var(--text-color);
+    }
+    .footer__title{
+        font-size: 38px;
+    }
+    .footer__desc{
+        font-size: 28px;
+    }
+    #form__userEmail{
+        font-size: 24px;
+        width: 14em;
+    }
+    #form__btnCad{
+        font-size: 24px;
+        padding: 1em;
+        width: 8em;
+    }
+    #descCopy{
+        font-size: 24px;
     }
 }
-
 
 
 
